@@ -1,0 +1,45 @@
+#explore-svg {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.about-btn {
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    color: $brown500;
+    background-color: #fff;
+    border: none;
+    border-radius: 0.6rem;
+    box-shadow: 6px 8px 3px 3px $green400;
+    outline: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:active {
+        transform: translateY(4px);
+        box-shadow: 4px 6px 3px 3px $green500;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include responsive($xl) {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    @include responsive($sm) {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+        box-shadow: 4px 4px 3px 3px $green400;
+        border-radius: 0.4rem;
+        margin-top: 1rem;
+    }
+}
+
+.slogan {
+    @include textNeon;
+}

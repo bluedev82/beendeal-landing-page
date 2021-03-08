@@ -1,0 +1,45 @@
+#about-svg {
+    width: 120%;
+    position: relative;
+    z-index: 100;
+
+    @include responsive($sm) {
+        width: 110%;
+    }
+}
+
+#ufo-svg {
+    animation: turnAround 1s ease infinite;
+}
+
+@keyframes turnAround {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.about__text {
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    margin: 5% 12% 5% 5%;
+    color: #fff;
+    text-align: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include responsive($sm) {
+        margin: 5% 20% 5% 5%;
+        font-size: 0.5rem;
+    }
+}
