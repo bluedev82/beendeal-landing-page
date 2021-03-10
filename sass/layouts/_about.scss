@@ -1,4 +1,4 @@
-#about-svg {
+.box {
     width: 120%;
     position: relative;
     z-index: 100;
@@ -8,17 +8,14 @@
     }
 }
 
-#ufo-svg {
-    animation: turnAround 1s ease infinite;
+#about-svg {
+    width: 100%;
 }
 
-@keyframes turnAround {
-    from {
-        transform: rotateZ(0deg);
-    }
-    to {
-        transform: rotateZ(360deg);
-    }
+#ufo-svg {
+    position: absolute;
+    z-index: 1000;
+    width: 60%;
 }
 
 .about__text {

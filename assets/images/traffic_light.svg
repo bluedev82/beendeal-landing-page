@@ -514,9 +514,8 @@
                 points="1209.662 20 1220.662 34 1204.805 351 1177.662 378 1135.662 380 1148.662 368 1160.662 330 1166.662 76 1155.662 67 1209.662 20"
                 fill="#2d2d2d"
             />
-            <g>
+            <g id="green-led">
                 <image
-                    id="green-led"
                     width="188"
                     height="190"
                     transform="translate(998.6619 44)"
@@ -530,9 +529,8 @@
                     fill="#16c450"
                 />
             </g>
-            <g>
+            <g id="red-led">
                 <image
-                    id="red-led"
                     width="190"
                     height="197"
                     transform="translate(998.6619 174)"

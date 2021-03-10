@@ -5,7 +5,7 @@
 }
 
 .about-btn {
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
     margin-top: 3rem;
     color: $brown500;
     background-color: #fff;
@@ -13,7 +13,7 @@
     border-radius: 0.6rem;
     box-shadow: 6px 8px 3px 3px $green400;
     outline: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.2s;
 
@@ -27,8 +27,7 @@
     }
 
     @include responsive($xl) {
-        padding: 1rem 1.5rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     @include responsive($sm) {
@@ -41,5 +40,12 @@
 }
 
 .slogan {
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.4s;
     @include textNeon;
+
+    &:hover {
+        text-shadow: 0 0 5px white, 0 0 12px white, 0 0 16px $yellow500;
+    }
 }

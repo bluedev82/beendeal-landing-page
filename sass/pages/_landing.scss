@@ -23,7 +23,6 @@ body {
         rgba(251, 194, 162, 1) 94.95%,
         rgba(251, 194, 162, 1) 100%
     );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#271233',endColorstr='#FBC2A2' , GradientType=1);
 
     &::after {
         content: "";
@@ -46,7 +45,6 @@ body {
             rgba(72, 27, 44, 1) 98.07%,
             rgba(72, 27, 44, 1) 100%
         );
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#31162B',endColorstr='#481B2C' , GradientType=1);
     }
 }
 
