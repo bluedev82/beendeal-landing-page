@@ -4,18 +4,52 @@
     z-index: 100;
 }
 
+#slogan {
+    transition: all 0.4s;
+    @include textNeon;
+
+    &:hover {
+        text-shadow: 0 0 5px white, 0 0 12px white, 0 0 16px $yellow500;
+    }
+}
+
+.green-led-off,
+.red-led-off {
+    path {
+        fill: #4d4d4d;
+    }
+
+    image {
+        display: none;
+    }
+}
+
 .about-btn {
+    position: relative;
     padding: 0.8rem 1.5rem;
     margin-top: 3rem;
     color: $brown500;
     background-color: #fff;
+    box-shadow: 6px 8px 3px 3px $green400;
     border: none;
     border-radius: 0.6rem;
-    box-shadow: 6px 8px 3px 3px $green400;
     outline: none;
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.2s;
+
+    &:hover {
+        animation: move 0.4s ease;
+    }
+
+    @keyframes move {
+        from {
+            transform: translateY(-4px);
+        }
+        to {
+            transform: translateY(0px);
+        }
+    }
 
     &:active {
         transform: translateY(4px);
@@ -36,16 +70,5 @@
         box-shadow: 4px 4px 3px 3px $green400;
         border-radius: 0.4rem;
         margin-top: 1rem;
-    }
-}
-
-.slogan {
-    position: absolute;
-    z-index: 1000;
-    transition: all 0.4s;
-    @include textNeon;
-
-    &:hover {
-        text-shadow: 0 0 5px white, 0 0 12px white, 0 0 16px $yellow500;
     }
 }

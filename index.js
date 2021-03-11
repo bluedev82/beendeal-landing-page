@@ -1,29 +1,36 @@
-const b = anime({
-    targets: "object#ufo-svg",
-    translateX: 250,
-});
+function importDynamicCssToSVG(svgId, cb) {
+    const obj = document.getElementById(svgId);
+    const objDoc = obj.contentDocument;
+    const objStyle = objDoc.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "style"
+    );
+
+    objStyle.textContent = '@import url("../../../sass/main.css");';
+    const objSvg = objDoc.querySelector("svg");
+    objSvg.insertBefore(objStyle, objSvg.firstChild);
+    if (cb) {
+        cb(objSvg);
+    }
+}
+
+function toggleLed(obj, ledId, classExtend, duration, delay = 0) {
+    const ledEl = obj.getElementById(ledId);
+    ledEl.classList.add(classExtend);
+    setInterval(() => {
+        ledEl.classList.toggle(classExtend);
+    }, duration);
+}
 
 window.onload = function () {
-    // dynamic css for explore.svg
-    const explore = document.getElementById("explore-svg");
-    const exploreDoc = explore.contentDocument;
-    const exploreStyle = exploreDoc.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "style"
-    );
+    const cbToggleLed = function (obj) {
+        toggleLed(obj, "green-led", "green-led-off", 2000);
+        setTimeout(() => {
+            toggleLed(obj, "red-led", "red-led-off", 2000);
+        }, 2000);
+    };
 
-    exploreStyle.textContent = '@import url("../../cssSvg/traffic-light.css");';
-    const exploreSvg = exploreDoc.querySelector("svg");
-    exploreSvg.insertBefore(exploreStyle, exploreSvg.firstChild);
-
-    // dynamic css for ufo.svg
-    const ufo = document.getElementById("ufo-svg");
-    const ufoDoc = ufo.contentDocument;
-    const ufoStyle = ufoDoc.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "style"
-    );
-    ufoStyle.textContent = '@import url("../../cssSvg/ufo.css");';
-    const ufoSvg = ufoDoc.querySelector("svg");
-    ufoSvg.insertBefore(ufoStyle, ufoSvg.firstChild);
+    importDynamicCssToSVG("explore-svg", cbToggleLed);
+    importDynamicCssToSVG("about-svg");
+    importDynamicCssToSVG("market-svg");
 };
