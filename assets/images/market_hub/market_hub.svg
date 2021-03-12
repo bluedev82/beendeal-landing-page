@@ -758,7 +758,7 @@
                     transform="translate(204.0429 708.3986)"
                     font-size="129.621"
                     fill="#fff"
-                    font-family="atmospheric"
+                    font-family="atmospheric, aAtmospheric, a Atmospheric"
                     letter-spacing="-0.002em"
                 >
                     MARKET
@@ -1006,9 +1006,9 @@
                 x="-383.0057"
                 y="-138.433"
                 font-size="30.7515"
-                font-family="aAtmospheric, a Atmospheric"
+                font-family="atmospheric, aAtmospheric, a Atmospheric"
             >
-                <tspan x="518.7479" y="128.7589">CONSTRUcTION</tspan>
+                <tspan x="518.7479" y="128.7589">CONSTRUCTION</tspan>
             </text>
             <polygon
                 points="850.013 221.063 832.35 205.9 832.35 228.06 850.013 243.586 850.013 221.063"
@@ -1033,7 +1033,7 @@
             <text
                 transform="translate(540.1763 86.0724)"
                 font-size="47.9194"
-                font-family="aAtmospheric, a Atmospheric"
+                font-family="atmospheric, aAtmospheric, a Atmospheric"
             >
                 under
             </text>
@@ -1165,7 +1165,7 @@
                     transform="translate(887.9982 174.5826)"
                     font-size="35.8384"
                     fill="#fff"
-                    font-family="aAtmospheric, a Atmospheric"
+                    font-family="atmospheric, aAtmospheric, a Atmospheric"
                 >
                     Sign up
                 </text>
