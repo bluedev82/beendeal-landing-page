@@ -33,4 +33,12 @@ window.onload = function () {
     importDynamicCssToSVG("explore-svg", cbToggleLed);
     importDynamicCssToSVG("about-svg");
     importDynamicCssToSVG("market-svg");
+
+    const progressBar = document.querySelector(".progressBar");
+    console.log(progressBar);
+    let totalPageHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = () => {
+        let newProgressHeight = (window.pageYOffset / totalPageHeight) * 100;
+        progressBar.style.height = `${newProgressHeight}%`;
+    };
 };

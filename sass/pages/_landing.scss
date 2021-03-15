@@ -48,10 +48,38 @@ body {
     }
 }
 
-#debris-svg {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
+::-webkit-scrollbar {
+    width: 0;
 }
+
+.scrollbar {
+    position: fixed;
+    top: 0;
+    right: 2px;
+    width: 4px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+
+    .progressBar {
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 0 4px white, 0 0 6px $yellow500;
+        border-radius: 4px;
+        opacity: 0.9;
+    }
+}
+
+// #rock-lg-0,
+// #rock-lg-1 {
+//     width: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 0;
+// }
+
+// #rock-lg-1 {
+//     g {
+//         animation-delay: -20s;
+//     }
+// }
